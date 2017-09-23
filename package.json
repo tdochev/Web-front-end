@@ -1,0 +1,27 @@
+{
+  "name": "web-front-end",
+  "version": "1.0.0",
+  "description": "Web front-end course project",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "sammy": "^0.7.6",
+    "systemjs": "^0.20.19",
+    "systemjs-plugin-babel": "^0.0.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdochev/Web-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdochev/Web-front-end/issues"
+  },
+  "homepage": "https://github.com/tdochev/Web-front-end#readme"
+}
