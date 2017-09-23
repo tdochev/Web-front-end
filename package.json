@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@types/gulp": "^4.0.4",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "systemjs-builder": "^0.16.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
