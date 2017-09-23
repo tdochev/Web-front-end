@@ -18,19 +18,10 @@
             'test': 'test.js',
 
             // Library files
+            'firebase': 'npm:firebase/firebase.js',
             'jquery': 'npm:jquery/dist/jquery.js',
             'sammy': 'npm:sammy/lib/min/sammy-latest.min.js',
         },
-        // packages: {
-        //     'main': { defaultExtension: 'js' },
-        //     'test': { defaultExtension: 'js' },
-        //     //Modules paths
-
-        // },
-        // bundles: {
-        //     'main.js': ['main.js'],
-        //     'test.js': ['test.js']
-        // }
     });
 
 })(this);
