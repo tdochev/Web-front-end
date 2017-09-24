@@ -1,13 +1,24 @@
 export default class homeController {
 
-    constructor(data) {
+    constructor(data, template) {
         this._data = data;
+        this._template = template;
+        this._categories = [];
     }
     test() {
-        console.log('home comtroller test');
+        console.log('home controller test');
     }
     main() {
-        console.log('home comtroller main action');
-        console.log(this._data);
+        this._data.getCategories().then((r) => {
+            for (var prop in r) {
+                this._categories.push(r[prop]);
+            }
+            this._template.loadTemplate('home').then((compiledTemplate) => {
+                $('#app-main').append(compiledTemplate(this._categories));
+            })
+        });
+
+        console.log(this._categories);
+
     }
 };

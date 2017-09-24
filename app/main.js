@@ -1,5 +1,8 @@
+/* globals System*/
+
 import Sammy from 'sammy';
 import Data from 'data';
+import HandlebarsTemplate from 'template';
 
 console.log('in main');
 
@@ -7,9 +10,9 @@ const data = new Data();
 
 function loadControllerWithAction(controller, action) {
     if (controller !== undefined && action !== undefined) {
+        const template = new HandlebarsTemplate();
         System.import(`../app/controllers/${controller}.controller.js`).then((controllerRef) => {
-            const currentController = new controllerRef.default(data);
-            console.log(currentController);
+            const currentController = new controllerRef.default(data, template);
             currentController[action]();
         });
     }
