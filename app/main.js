@@ -1,27 +1,38 @@
 import Sammy from 'sammy';
-import { db } from 'db';
+import Data from 'data';
 
 console.log('in main');
+
+const data = new Data();
+
+function loadControllerWithAction(controller, action) {
+    if (controller !== undefined && action !== undefined) {
+        System.import(`../app/controllers/${controller}.controller.js`).then((controllerRef) => {
+            const currentController = new controllerRef.default(data);
+            console.log(currentController);
+            currentController[action]();
+        });
+    }
+}
 
 const app = Sammy(function() {
     'use strict';
 
-    this.get('#/', function() {
-        $('title')[0].text = 'home';
+    this.get('#/', () => {
+        const controller = 'home';
+        const action = 'main'
+        loadControllerWithAction(controller, action);
+
     });
 
-    this.get('#/test', () => {
-        $('title')[0].text = 'test';
-        // const newPostKey = db.ref().child('posts').push().key;
-        // console.log(newPostKey);
-        // var updates = {};
-        // updates['/posts/' + newPostKey] = {
-        //     name: 'test',
-        //     text: 'test a test'
-        // };
+    this.get('#/:controller/:action', function() {
+        const controller = this.params['controller'];
+        const action = this.params['action'];
+        loadControllerWithAction(controller, action);
+    });
 
-        // db.ref().update(updates);
-
+    this.get(/.*/, () => {
+        $('title')[0].text = '404';
     });
 
 });

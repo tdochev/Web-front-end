@@ -13,6 +13,8 @@ SystemJS.config({
         'sammy': 'npm:sammy/lib/sammy.js',
         'firebase': 'npm:firebase/firebase.js',
         'db': './app/modules/db.js',
+        'data': './app/modules/data.js',
+        'requester': 'app/utils/requester.js',
     },
     packages: {
         'app': { main: 'main.js', defaultExtension: 'js' },
