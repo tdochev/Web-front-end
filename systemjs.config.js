@@ -16,7 +16,8 @@ SystemJS.config({
         'data': './app/modules/data.js',
         'requester': 'app/utils/requester.js',
         'template': 'app/utils/template.js',
-        'handlebars': 'npm:handlebars/dist/handlebars.min.js'
+        'handlebars': 'npm:handlebars/dist/handlebars.min.js',
+        'homeController': './app/controllers/home.controller.js'
     },
     packages: {
         'app': { main: 'main.js', defaultExtension: 'js' },

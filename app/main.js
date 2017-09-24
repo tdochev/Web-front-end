@@ -7,10 +7,10 @@ import HandlebarsTemplate from 'template';
 console.log('in main');
 
 const data = new Data();
+const template = new HandlebarsTemplate();
 
 function loadControllerWithAction(controller, action) {
     if (controller !== undefined && action !== undefined) {
-        const template = new HandlebarsTemplate();
         System.import(`../app/controllers/${controller}.controller.js`).then((controllerRef) => {
             const currentController = new controllerRef.default(data, template);
             currentController[action]();
