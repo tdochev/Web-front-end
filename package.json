@@ -1,33 +1,20 @@
 {
-  "name": "web-front-end",
-  "version": "1.0.0",
-  "description": "Web front-end course project",
-  "main": "index.js",
-  "dependencies": {
-    "@types/firebase": "^2.4.32",
-    "firebase": "^4.4.0",
-    "jquery": "^3.2.1",
-    "sammy": "^0.7.6",
-    "systemjs": "^0.20.19",
-    "systemjs-plugin-babel": "^0.0.25"
-  },
-  "devDependencies": {
-    "@types/gulp": "^4.0.4",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "systemjs-builder": "^0.16.11"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tdochev/Web-front-end.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tdochev/Web-front-end/issues"
-  },
-  "homepage": "https://github.com/tdochev/Web-front-end#readme"
+    "name": "web-front-end",
+    "version": "1.0.0",
+    "description": "Web front-end course project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "live-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "firebase": "^4.4.0",
+        "jquery": "^3.2.1",
+        "sammy": "^0.7.6",
+        "systemjs": "^0.20.19",
+        "systemjs-plugin-babel": "0.0.25"
+    }
 }
