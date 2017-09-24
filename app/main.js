@@ -9,11 +9,14 @@ console.log('in main');
 const data = new Data();
 const template = new HandlebarsTemplate();
 
+//Load menu and etc...
+loadControllerWithAction('home', 'main');
+
 function loadControllerWithAction(controller, action) {
     if (controller !== undefined && action !== undefined) {
         System.import(`../app/controllers/${controller}.controller.js`).then((controllerRef) => {
             const currentController = new controllerRef.default(data, template);
-            currentController[action]();
+            currentController.main();
         });
     }
 }
@@ -21,12 +24,7 @@ function loadControllerWithAction(controller, action) {
 const app = Sammy(function() {
     'use strict';
 
-    this.get('#/', () => {
-        const controller = 'home';
-        const action = 'main'
-        loadControllerWithAction(controller, action);
-
-    });
+    this.get('#/', () => {});
 
     this.get('#/:controller/:action', function() {
         const controller = this.params['controller'];

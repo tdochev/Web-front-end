@@ -1,8 +1,12 @@
 <header>
-    <h1>test</h1>>
+    <h1>test</h1>
+    <nav>
     <ul class="list-inline">
+        <li class="list-inline-item"><a href="#/">home</a></li>
+        <li class="list-inline-item"><a href="#/about">about</a></li>
         {{#each this}}
-        <li class="list-inline-item"><a href="/category/{{this}}">{{this}}</a></li>
+        <li class="list-inline-item"><a href="#/category/{{this}}">{{this}}</a></li>
         {{/each}}
     </ul>
+    </nav>
 </header>
