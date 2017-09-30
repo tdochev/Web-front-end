@@ -1,4 +1,4 @@
-export default class homeController {
+export default class categoryController {
 
     constructor(data, template) {
         this._data = data;
@@ -8,5 +8,8 @@ export default class homeController {
 
     main() {
         console.log('category controller test');
+    }
+    show(param) {
+        console.log(`category controller ${param}`);
     }
 }

@@ -12,11 +12,11 @@ const template = new HandlebarsTemplate();
 //Load menu and etc...
 loadControllerWithAction('home', 'main');
 
-function loadControllerWithAction(controller, action) {
+function loadControllerWithAction(controller, action, param) {
     if (controller !== undefined && action !== undefined) {
         System.import(`../app/controllers/${controller}.controller.js`).then((controllerRef) => {
             const currentController = new controllerRef.default(data, template);
-            currentController.main();
+            currentController[action](param);
         });
     }
 }
@@ -26,10 +26,11 @@ const app = Sammy(function() {
 
     this.get('#/', () => {});
 
-    this.get('#/:controller/:action', function() {
+    this.get('#/:controller/:action/:param', function() {
         const controller = this.params['controller'];
         const action = this.params['action'];
-        loadControllerWithAction(controller, action);
+        const param = this.params['param'];
+        loadControllerWithAction(controller, action, param);
     });
 
     this.get(/.*/, () => {
