@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "live-server"
+        "dev": "npm run saas-dev && live-server",
+        "saas-dev": "node-sass scss/main.scss > main.css"
     },
     "keywords": [],
     "author": "",
@@ -17,5 +18,8 @@
         "sammy": "^0.7.6",
         "systemjs": "^0.20.19",
         "systemjs-plugin-babel": "0.0.25"
+    },
+    "devDependencies": {
+        "systemjs-builder": "^0.16.11"
     }
 }

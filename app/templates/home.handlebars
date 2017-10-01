@@ -1,12 +1,26 @@
 <header>
     <h1>test</h1>
-    <nav>
-    <ul class="list-inline">
-        <li class="list-inline-item"><a href="#/">home</a></li>
-        <li class="list-inline-item"><a href="#/about">about</a></li>
+    <nav class="nav">
+        <a class="nav-link" href="#/">home</a></li>
+        <a class="nav-link" href="#/about">about</a></li>
         {{#each this}}
-        <li class="list-inline-item"><a href="#/category/show/{{this}}">{{this}}</a></li>
+        <a class="nav-link" href="#/category/show/{{this}}">{{this}}</a></li>
         {{/each}}
-    </ul>
+        <form>
+            <input class="search-box" type="text" placeholder="Search this website..." name="search">
+        </form>
     </nav>
+
 </header>
+
+
+<footer>
+    <div class="row">
+        <div class="col">
+            test
+        </div>
+        <div class="col">
+            test
+        </div>
+    </div>
+</footer>
