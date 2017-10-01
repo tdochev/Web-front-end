@@ -1,6 +1,21 @@
+.container-fluid {
+    @include make-container();
+}
+
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: ($grid-gutter-width / -2);
-    margin-left: ($grid-gutter-width / -2);
+    @include make-row();
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    >.col,
+    >[class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@if $enable-grid-classes {
+    @include make-grid-columns();
 }

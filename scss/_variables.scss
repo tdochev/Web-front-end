@@ -8,5 +8,7 @@ $link-hover-decoration: none !default;
 $nav-link-padding-y: .5rem !default;
 $nav-link-padding-x: .5rem !default;
 //grid
+$enable-grid-classes: true;
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
