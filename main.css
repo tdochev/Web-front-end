@@ -832,6 +832,14 @@ body {
 .logo {
   padding: 115px 0 0 60px; }
 
+.post {
+  border: 2px solid #ffffff;
+  margin-left: 5px;
+  padding: 0px; }
+
+.post-container {
+  margin-left: 60px; }
+
 .fade {
   opacity: 0;
   transition: opacity 0.15s linear; }
