@@ -1,4 +1,5 @@
 $body-bg: #2c2c2c !default;
+$main-color: #dcc08e !default;
 
 // Options
 //
@@ -91,22 +92,14 @@ $navbar-toggler-padding-y: .25rem !default;
 $navbar-toggler-padding-x: .75rem !default;
 $navbar-toggler-font-size: $font-size-lg !default;
 $navbar-toggler-border-radius: $btn-border-radius !default;
-$navbar-dark-color: rgba(#fff, .5) !default;
-$navbar-dark-hover-color: rgba(#fff, .75) !default;
-$navbar-dark-active-color: rgba(#fff, 1) !default;
-$navbar-dark-disabled-color: rgba(#fff, .25) !default;
-$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
-"#",
-"%23") !default;
-$navbar-dark-toggler-border-color: rgba(#fff,.1) !default;
-$navbar-light-color: rgba(#000,.5) !default;
-$navbar-light-hover-color: rgba(#000,.7) !default;
-$navbar-light-active-color: rgba(#000,.9) !default;
-$navbar-light-disabled-color: rgba(#000,.3) !default;
-$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
-"#",
-"%23") !default;
-$navbar-light-toggler-border-color: rgba(#000,.1) !default;
+
+$navbar-default-color: rgba($main-color,1) !default;
+$navbar-default-hover-color: rgba($main-color, .75) !default;
+$navbar-default-active-color: rgba($main-color, 1) !default;
+$navbar-default-disabled-color: rgba($main-color, .25) !default;
+$navbar-default-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $navbar-default-color + "' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+$navbar-default-toggler-border-color: rgba($main-color,.1) !default;
+
 
 
 // Links
