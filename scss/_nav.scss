@@ -1,14 +1,13 @@
+
+@font-face {
+        font-family: "LeagueGothicRegular";
+        src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
+        font-weight: normal;
+      }
+
 body {
     background-color: $body-bg;
-}
-
-h1 {
-    color: $link-color;
-}
-
-h2 {
-    color: $link-hover-color;
-    ;
+    font-family: LeagueGothicRegular;
 }
 
 .nav {
