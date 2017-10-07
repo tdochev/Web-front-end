@@ -20,7 +20,7 @@ body {
   text-transform: uppercase;
   font-size: 24px;
   text-decoration: none;
-  padding: 0.5rem 1rem; }
+  padding: 0.4rem 1rem; }
 
 .nav-link:hover {
   color: #dcc08e;
@@ -573,7 +573,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding-left: 68px; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;
@@ -583,8 +583,8 @@ body {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.2125rem;
+  padding-bottom: 0.2125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -607,8 +607,8 @@ body {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem; }
 
 .navbar-collapse {
   flex-basis: 100%;
@@ -830,7 +830,7 @@ body {
   visibility: hidden !important; }
 
 .logo {
-  padding: 125px 0 0 65px; }
+  padding: 115px 0 0 60px; }
 
 .fade {
   opacity: 0;
