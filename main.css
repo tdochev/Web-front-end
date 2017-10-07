@@ -828,3 +828,11 @@ h2 {
 
 .invisible {
   visibility: hidden !important; }
+
+@font-face {
+  font-family: "LeagueGothicRegular";
+  src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
+  font-weight: normal; }
+
+.logo {
+  padding: 125px 0 0 65px; }
