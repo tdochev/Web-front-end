@@ -613,7 +613,7 @@ h2 {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center; }
+  align-items: left; }
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -811,7 +811,7 @@ h2 {
 
 .navbar-default .navbar-toggler {
   color: #dcc08e;
-  border-color: rgba(220, 192, 142, 0.1); }
+  border-color: rgba(220, 192, 142, 0.8); }
 
 .navbar-default .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#dcc08e' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
@@ -836,3 +836,26 @@ h2 {
 
 .logo {
   padding: 125px 0 0 65px; }
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear; }
+  .fade.show {
+    opacity: 1; }
+
+.collapse {
+  display: none; }
+  .collapse.show {
+    display: block; }
+
+tr.collapse.show {
+  display: table-row; }
+
+tbody.collapse.show {
+  display: table-row-group; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; }

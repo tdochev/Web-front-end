@@ -6,6 +6,7 @@ $main-color: #dcc08e !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:            true !default;
+$enable-transitions:            true !default;
 
 // Spacing
 $spacer: 1rem !default;
@@ -82,7 +83,7 @@ $navbar-default-hover-color: rgba($main-color, .75) !default;
 $navbar-default-active-color: rgba($main-color, 1) !default;
 $navbar-default-disabled-color: rgba($main-color, .25) !default;
 $navbar-default-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $navbar-default-color + "' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-$navbar-default-toggler-border-color: rgba($main-color,.1) !default;
+$navbar-default-toggler-border-color: rgba($main-color,.8) !default;
 
 
 
