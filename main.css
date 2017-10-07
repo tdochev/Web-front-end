@@ -822,3 +822,9 @@ h2 {
     color: #dcc08e; }
     .navbar-default .navbar-text a:focus, .navbar-default .navbar-text a:hover {
       color: #dcc08e; }
+
+.visible {
+  visibility: visible !important; }
+
+.invisible {
+  visibility: hidden !important; }
