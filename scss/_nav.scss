@@ -1,15 +1,4 @@
 
-@font-face {
-        font-family: "LeagueGothicRegular";
-        src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
-        font-weight: normal;
-      }
-
-body {
-    background-color: $body-bg;
-    font-family: LeagueGothicRegular;
-}
-
 .nav {
     display: flex;
     flex-wrap: wrap;
