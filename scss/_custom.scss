@@ -3,11 +3,34 @@
 }
 
 .post {
-    border: 2px solid #ffffff;
-    margin-left: 5px;
+    border: 2.5px solid $main-link-color;
+    margin-left: 8px;
+    margin-bottom: 8px;
     padding: 0px;
+    max-width: min-content;
 }
 
 .post-container {
     margin-left: 60px;
+}
+
+.post-image {
+    position: absolute;
+}
+
+.post-category {
+    margin-left: 60px;
+    position: absolute;
+    background-color: #9a1d0d;
+    top: 0px;
+    right: 0px;
+    ul {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: $main-link-color;
+            font-size: 22px;
+        }
+    }
+
 }
