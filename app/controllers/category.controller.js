@@ -12,4 +12,7 @@ export default class categoryController {
     show(param) {
         console.log(`category controller ${param}`);
     }
+    add(param) {
+        this._data.addCategorie(param);
+    }
 }

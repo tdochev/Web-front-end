@@ -4,7 +4,7 @@ export default class Data {
     constructor() {
         this._db = db;
     }
-    addCategorie(categories) {
+    addCategorie(categorie) {
         var newPostKey = this._db.ref().child('categories').push().key;
         var updates = {};
         updates['/categories/' + newPostKey] = categorie;
