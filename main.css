@@ -612,7 +612,7 @@
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem; }
+  border-radius: 0; }
   .navbar-toggler:focus, .navbar-toggler:hover {
     text-decoration: none; }
 
@@ -1812,18 +1812,38 @@ body {
   background-color: #2c2c2c;
   font-family: LeagueGothicRegular; }
 
+.navbar {
+  padding-left: 75px;
+  padding-top: 14px; }
+
+.nav-item {
+  padding: 0px; }
+
+.nav-link {
+  padding-right: 0.68rem !important;
+  padding-left: 0.5rem !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.5rem !important; }
+
 input.search {
   background-color: #232223;
   border-color: transparent;
-  border-bottom-color: #323232;
-  border-right-color: #323232; }
+  border-bottom: 1px solid #323232;
+  border-right: 1px solid #323232;
+  margin-right: 5rem !important;
+  font-family: Arial !important;
+  font-size: 12px !important;
+  font-style: italic; }
 
 .logo {
-  padding: 115px 0 0 60px; }
+  padding: 122px 0 0 67px; }
 
 main {
   padding-top: 46px;
   padding-left: 6px; }
+
+.post-container {
+  margin-left: 68px; }
 
 .post {
   border: 5px solid #ffffff;
@@ -1871,9 +1891,6 @@ main {
     padding-left: 12px;
     padding-right: 12px;
     line-height: 19px; }
-
-.post-container {
-  margin-left: 60px; }
 
 .post-image {
   position: absolute; }
@@ -1958,7 +1975,7 @@ tbody.collapse.show {
   background-color: #222222;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem; }
+  border-radius: 0; }
 
 .dropdown-divider {
   height: 0;
@@ -2011,7 +2028,7 @@ tbody.collapse.show {
   background-image: none;
   background-clip: padding-box;
   border: 1px solid #adb5bd;
-  border-radius: 0.25rem;
+  border-radius: 0;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
   .form-control::-ms-expand {
     background-color: transparent;
@@ -2079,7 +2096,7 @@ select.form-control:focus::-ms-value {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 0.2rem; }
+  border-radius: 0; }
 
 select.form-control-sm:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
@@ -2088,7 +2105,7 @@ select.form-control-sm:not([size]):not([multiple]) {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem; }
+  border-radius: 0; }
 
 select.form-control-lg:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }

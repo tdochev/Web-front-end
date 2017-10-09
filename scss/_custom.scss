@@ -2,28 +2,52 @@
     font-family: "LeagueGothicRegular";
     src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
     font-weight: normal;
-  }
+}
 
-  body {
+body {
     background-color: $body-bg;
     font-family: LeagueGothicRegular;
 }
 
-input.search{
-    //set all variables later
+.navbar {
+    padding-left: 75px;
+    padding-top: 14px;
+}
+
+.nav-item {
+    padding: 0px;
+}
+
+.nav-link {
+    padding-right: 0.68rem !important;
+    padding-left: 0.5rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+input.search {
     background-color: #232223;
     border-color: transparent;
-    border-bottom-color: #323232;
-    border-right-color: #323232;
+    border-bottom: 1px solid #323232;
+    border-right: 1px solid #323232;
+    margin-right: 5rem !important;
+    font-family: Arial !important;
+    font-size: 12px !important;
+    font-style: italic;
+
 }
 
 .logo {
-    padding: 115px 0 0 60px;
+    padding: 122px 0 0 67px;
 }
 
 main {
     padding-top: 46px;
     padding-left: 6px;
+}
+
+.post-container {
+    margin-left: 68px;
 }
 
 .post {
@@ -33,30 +57,28 @@ main {
     padding: 0px;
     max-width: min-content;
     background-color: $main-link-color;
-
     span {
         color: $main-link-color;
         font-size: 48px;
-        text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 1px 2px 4px rgba($black, 0.3);
     }
-    span.month{
+    span.month {
         position: absolute;
         top: 30px;
         right: 5px;
     }
-    span.day{
+    span.day {
         position: absolute;
         top: 70px;
         right: 5px;
     }
-
     h2 {
         font-size: 30px;
         margin-top: 2px;
         padding-left: 10px;
         padding-right: 14px;
         margin-bottom: 0px;
-        a{
+        a {
             color: #9a1d0d;
             text-decoration: none;
             text-transform: uppercase;
@@ -73,8 +95,8 @@ main {
         border: 1px dotted #BCBCBC;
         margin-top: 10px;
     }
-    .post-text{
-        font-family: $font-family-secondary;      
+    .post-text {
+        font-family: $font-family-secondary;
         font-size: 13px;
         color: #7a7575;
         margin-top: 8px;
@@ -82,10 +104,6 @@ main {
         padding-right: 12px;
         line-height: 19px;
     }
-}
-
-.post-container {
-    margin-left: 60px;
 }
 
 .post-image {
@@ -110,5 +128,4 @@ main {
             font-size: 22px;
         }
     }
-
 }
