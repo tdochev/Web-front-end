@@ -13,5 +13,14 @@ gulp.task('watch', ['sass'], function() {
 })
 
 gulp.task('dev', ['watch'], function() {
-    exec("live-server");
+    exec('live-server');
+});
+
+gulp.task('build', ()=> {
+     gulp.src('./index.html')
+      .pipe(gulp.dest('dist'));
+});
+
+gulp.task('deploy', ['build'], ()=>{
+    exec('firebase deploy');
 });

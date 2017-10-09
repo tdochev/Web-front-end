@@ -55,7 +55,7 @@ main {
     margin-left: 28px;
     margin-bottom: 24px;
     padding: 0px;
-    //max-width: min-content;
+    max-width: min-content;
     background-color: $main-link-color;
     span {
         color: $main-link-color;
@@ -125,5 +125,15 @@ main {
             color: $main-link-color;
             font-size: 22px;
         }
+    }
+}
+
+.pagination {
+    text-align: center;
+    font-size: 36px !important;
+    padding-top: 10px;
+    margin-left: 60px;    
+    span {
+
     }
 }
