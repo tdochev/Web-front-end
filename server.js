@@ -1,9 +1,7 @@
 const express = require ('express');
-var port = process.env.PORT || 3000;
-var app = express.createServer();
+const port = process.env.PORT || 3000;
+const app = express();
 
-app.get('/', function(request, response) {
-    response.sendfile(__dirname + '/index.html');
-}).configure(function() {
-    app.use('/fonts', express.static(__dirname + '/fonts'));
+app.use(express.static('./')).get('/', function(request, response) {
+    response.sendFile('./index.html');
 }).listen(port);
