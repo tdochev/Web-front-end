@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const { ProvidePlugin } = require('webpack')
+const { ProvidePlugin, optimize} = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -65,7 +65,17 @@ module.exports = {
           loader: 'image-webpack-loader',
         },
       ],
-    },]
+    },
+    {
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['env'],
+        }
+      }
+    }]
   },
   devServer: {
     contentBase: './dist'
@@ -81,6 +91,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: resolve(__dirname, 'src', 'index.html'),
     }),
-    extractSass
+    extractSass,
+    new optimize.UglifyJsPlugin({
+      parallel: 4,
+      sourceMap: true
+    })
   ]
 }
