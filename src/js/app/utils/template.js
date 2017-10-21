@@ -1,6 +1,7 @@
 /* globals Promise */
 
-import Requester from 'requester';
+
+import Requester from './requester.js';
 import Handlebars from 'handlebars';
 
 export default class HandlebarsTemplate {
@@ -14,7 +15,9 @@ export default class HandlebarsTemplate {
             return Promise.resolve(this._cacheObj[templateName]);
         }
 
-        return this._requester.get(`app/templates/${templateName}.handlebars`)
+        System.import(`../templates/${templateName}.handlebars`);
+
+        return this._requester.get(`${templateName}.handlebars`)
             .then(template => {
                 const compiledTemplate = Handlebars.compile(template);
                 this._cacheObj[templateName] = compiledTemplate;

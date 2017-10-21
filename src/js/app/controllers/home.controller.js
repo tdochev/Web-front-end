@@ -1,3 +1,4 @@
+import './../../../images/logo.png';
 export default class homeController {
 
     constructor(data, template) {
@@ -17,7 +18,7 @@ export default class homeController {
                     this._categories.push(r[prop]);
                 }
                 this._template.loadTemplate('home').then((compiledTemplate) => {
-                    $('#app-main').append(compiledTemplate(this._categories));
+                    $('body').append(compiledTemplate(this._categories));
                 })
             });
         }

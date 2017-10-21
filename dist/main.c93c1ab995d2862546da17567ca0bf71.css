@@ -1936,7 +1936,7 @@
 
 @font-face {
   font-family: "LeagueGothicRegular";
-  src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
+  src: url(/./fonts/LeagueGothic-Regular.cad4b35.otf);
   font-weight: normal; }
 
 body {
@@ -2125,7 +2125,7 @@ tbody.collapse.show {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #adb5bd;
+  color: #ffffff;
   text-align: inherit;
   white-space: nowrap;
   background: none;
