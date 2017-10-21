@@ -182,7 +182,7 @@
     }
     .navbar-nav {
         .nav-link {
-            color: $navbar-default-color;
+            color: $white;
             @include hover-focus {
                 color: $navbar-default-hover-color;
             }
@@ -192,7 +192,9 @@
         }
         .show>.nav-link,
         .active>.nav-link,
-        .nav-link.show,
+        .nav-link.show {
+            color: $white;
+        }
         .nav-link.active {
             color: $navbar-default-active-color;
         }
