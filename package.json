@@ -9,7 +9,7 @@
     "build": "npm run clean && webpack",
     "watch": "webpack --progress --watch",
     "dev": "webpack-dev-server --no-inline --open",
-    "deploy": "npm run clean && npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy"
   },
   "keywords": [],
   "author": "",
