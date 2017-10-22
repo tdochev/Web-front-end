@@ -35,6 +35,10 @@ input.search {
     }
 }
 
+.navbar-toggler {
+    border: 1px solid #dcc08e;
+}
+
 .post {
     border: 3px solid $main-link-color;
     margin-left: 28px;
@@ -109,13 +113,6 @@ input.search {
     }
 }
 
-.pagination {
-    text-align: center;
-    font-size: 36px !important;
-    padding-top: 10px;
-    margin-left: 60px;
-    span {}
-}
 
 // @media (max-width: 576px) {
 //     .post{
@@ -135,4 +132,52 @@ input.search {
     color: $link-color;
     content: '»';
     padding: 0 0.5rem 0 0.3rem;
+}
+
+@media (min-width: 1200px) {
+    header{
+        padding-left: 2rem;
+    }
+}
+@media (max-width: 1199px) {
+    header{
+        padding-left: 0.5rem;
+    }
+}
+
+.pagination {
+    color: $white;
+    font-family: LeagueGothicRegular;
+    letter-spacing: 0.5rem;
+    line-height: 3rem;
+    padding: 4rem 0 3rem;
+    text-align: center;
+    a {
+        color: $white;
+    }
+    a:hover {
+        color: $main-color;
+    }
+    ul {
+        font-size: 5rem;
+        position: relative;
+    }
+    ul > li:first-child {
+        font-size: 5rem;
+        position: absolute;
+        left: 0;
+        top: -0.7rem;
+    }
+    ul > li:last-child {
+        font-size: 5rem;
+        position: absolute;
+        right: 0;
+        top: -0.7rem;
+    }
+    .page-link {
+        border: none !important;
+        background: none !important;
+        font-size: 5rem;
+        position: relative;
+    }
 }
