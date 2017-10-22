@@ -6,5 +6,6 @@ export default class Post {
         this.author = author;
         this.date = date;
         this.imageUrl = imageUrl;
+        this.comments = [];
     }
 }

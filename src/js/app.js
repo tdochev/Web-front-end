@@ -32,8 +32,14 @@ const app = Sammy(function() {
     this.get('#/:controller/:action/:param', function() {
         const controller = this.params['controller'];
         const action = this.params['action'];
-        const param = this.params['param'];
+        const param = this.params['param']
         loadControllerWithAction(controller, action, param);
+    });
+
+    this.get('#/:controller/:action', function() {
+        const controller = this.params['controller'];
+        const action = this.params['action'];
+        loadControllerWithAction(controller, action, undefined);
     });
 
     this.get(/.*/, () => {
