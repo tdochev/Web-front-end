@@ -140,3 +140,12 @@ main {
 
     }
 }
+@media (max-width: 576px) {
+    .post{
+        .img{
+            width: 80vw;
+            height: auto;
+        }
+    }
+
+}
