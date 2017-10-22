@@ -17,6 +17,7 @@ export default class homeController {
                 for (var prop in r) {
                     this._categories.push(r[prop]);
                 }
+                this._template.compilePartial('post');
                 this._template.loadTemplate('home').then((compiledTemplate) => {
                     $('body').append(compiledTemplate(this._categories));
                 })

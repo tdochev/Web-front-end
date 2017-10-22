@@ -10,6 +10,14 @@ export default class HandlebarsTemplate {
         this._requester = new Requester();
     }
 
+    compilePartial(partialName){
+        System.import(`../templates/partials/${partialName}.handlebars`);
+        this._requester.get(`${partialName}.handlebars`).then(template=>{
+            Handlebars.registerPartial(partialName, template);
+        });
+
+    }
+
     loadTemplate(templateName) {
         if (this._cacheObj.hasOwnProperty(templateName)) {
             return Promise.resolve(this._cacheObj[templateName]);

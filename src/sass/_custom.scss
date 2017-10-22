@@ -12,21 +12,6 @@ body {
     color: $main-color;
 }
 
-.navbar {
-    padding-left: 75px;
-    padding-top: 14px;
-}
-
-.nav-item {
-    padding: 0px;
-}
-
-.nav-link {
-    padding-right: 0.68rem !important;
-    padding-left: 0.5rem !important;
-    padding-top: 0.4rem !important;
-    padding-bottom: 0.5rem !important;
-}
 
 input.search {
     background-color: #232223;
@@ -38,19 +23,6 @@ input.search {
     font-size: 12px !important;
     font-style: italic;
 
-}
-
-.logo {
-    padding: 122px 0 0 67px;
-}
-
-main {
-    padding-top: 46px;
-    padding-left: 6px;
-}
-
-.post-container {
-    margin-left: 68px;
 }
 
 .post {
@@ -106,10 +78,6 @@ main {
         padding-right: 12px;
         line-height: 19px;
     }
-}
-
-.post-image {
-    position: absolute;
 }
 
 .post-category {
