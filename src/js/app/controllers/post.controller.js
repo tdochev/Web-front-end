@@ -32,13 +32,13 @@ export default class postController {
                 //add post
                 $('#submitPost').on('click', () => {
                     const title = $('#postTitle')[0].value;
-                    const contetnt= $('#postCongtent')[0].value;
-                    const category= $('#postCategory')[0].value
-                    const author= $('#postAuthor')[0].value;
-                    const date =  moment().format();
-                    const imageUrl = 'https://lorempixel.com/222/180/';                 
+                    const contetnt = $('#postCongtent')[0].value;
+                    const category = $('#postCategory')[0].value
+                    const author = $('#postAuthor')[0].value;
+                    const date = moment().format();
+                    const imageUrl = 'https://lorempixel.com/222/180/';
 
-                    const post = new Post(title, contetnt, category ,author,date,imageUrl);
+                    const post = new Post(title, contetnt, category, author, date, imageUrl);
                     this._data.addPost(post);
 
                 });
@@ -47,8 +47,13 @@ export default class postController {
     }
 
     show(id) {
-        this._data.getPostByID(id).then(post => {
-            console.log(post);
-        })
+        this._template.loadTemplate('postPage').then((compiledTemplate) => {
+            this._data.getPostByID(id).then(post => {
+                const context = {
+                    post: post
+                };
+                $('#app-main').html(compiledTemplate(context));
+            })
+        });
     }
 }

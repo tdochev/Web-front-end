@@ -18,8 +18,12 @@ export default class homeController {
                     this._categories.push(r[prop]);
                 }
                 this._template.compilePartial('post');
+                this._template.compilePartial('nav');
                 this._template.loadTemplate('home').then((compiledTemplate) => {
-                    $('#app-main').html(compiledTemplate(this._categories));
+                    const context = {
+                        categories: this._categories
+                    }
+                    $('#app-main').html(compiledTemplate(context));
                 })
             });
         }

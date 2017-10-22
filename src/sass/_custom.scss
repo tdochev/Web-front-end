@@ -5,24 +5,34 @@
 }
 
 $background-image: url('../images/logo.png');
-
 body {
     background-color: $body-bg;
     font-family: LeagueGothicRegular;
     color: $main-color;
 }
 
-
 input.search {
-    background-color: #232223;
-    border-color: transparent;
-    border-bottom: 1px solid #323232;
-    border-right: 1px solid #323232;
-    margin-right: 5rem !important;
-    font-family: Arial !important;
-    font-size: 12px !important;
+    background: transparent url(../images/search-btn.png) no-repeat scroll 100%;
+    background-color: #1d1e1e;
+    border: solid #202020;
+    border-width: 0 1px 1px 0;
+    border-radius: 3px;
+    color: #c5c5c5;
+    font-size: 1.1rem;
     font-style: italic;
+    text-shadow: 1px 1px #000;
+    width: 17rem;
+}
 
+.navbar-nav{
+    a {
+        font-family: LeagueGothicRegular;
+        color: $white;
+        text-shadow: 1px 1px $black;
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
 }
 
 .post {
@@ -103,17 +113,26 @@ input.search {
     text-align: center;
     font-size: 36px !important;
     padding-top: 10px;
-    margin-left: 60px;    
-    span {
-
-    }
+    margin-left: 60px;
+    span {}
 }
-@media (max-width: 576px) {
-    .post{
-        .img{
-            width: 80vw;
-            height: auto;
-        }
-    }
 
+// @media (max-width: 576px) {
+//     .post{
+//         .img{
+//             width: 80vw;
+//             height: auto;
+//         }
+//     }
+// }
+.breadcrumb {
+    background: none;
+    margin-bottom: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: $link-color;
+    content: '»';
+    padding: 0 0.5rem 0 0.3rem;
 }
