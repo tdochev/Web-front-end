@@ -11,7 +11,7 @@ const data = new Data();
 const template = new HandlebarsTemplate();
 
 //Load menu and etc...
-loadControllerWithAction('home', 'main');
+
 
 function loadControllerWithAction(controller, action, param) {
     if (controller !== undefined && action !== undefined) {
@@ -25,7 +25,9 @@ function loadControllerWithAction(controller, action, param) {
 const app = Sammy(function() {
     'use strict';
 
-    this.get('#/', () => {});
+    this.get('#/', () => {
+        loadControllerWithAction('home', 'main');
+    });
 
     this.get('#/:controller/:action/:param', function() {
         const controller = this.params['controller'];

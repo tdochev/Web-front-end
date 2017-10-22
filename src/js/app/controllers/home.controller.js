@@ -19,7 +19,7 @@ export default class homeController {
                 }
                 this._template.compilePartial('post');
                 this._template.loadTemplate('home').then((compiledTemplate) => {
-                    $('body').append(compiledTemplate(this._categories));
+                    $('#app-main').html(compiledTemplate(this._categories));
                 })
             });
         }
