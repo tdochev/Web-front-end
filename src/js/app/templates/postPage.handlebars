@@ -10,9 +10,9 @@
   <div class="row">
     <div class="col-sm-12 col-lg-3 card">
       <div class="image">
-        <img src="{{post.imageUrl}}" alt="Post image">
+        <img class="post-image" src="{{post.imageUrl}}" alt="Post image">
         <span class="category">
-<a href="#">{{post.category}}</a>  
+          <a href="#">{{post.category}}</a>
         </span>
         <span class="month">SEP</span>
         <span class="day">22</span>
@@ -38,6 +38,36 @@
         {{post.content}}
       </p>
     </div>
+  </div>
+  <div class="row">
+    <div class="comments col-sm-12 col-lg-9 offset-lg-3 card">
+      <span class="comments-count">0 comments</span>
+      <div class="media">
+        <div class="avatar-image">
+          <img class="d-flex mr-3" src="https://lorempixel.com/72/72/" alt="avatar image">
+        </div>
+        <div class="media-body">
+          <h5 class="mt-0">Media heading</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+          vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+          in faucibus.
+
+          <div class="media mt-3">
+            <a class="d-flex pr-3" href="#">
+              <div class="avatar-image">
+              <img src="https://lorempixel.com/72/72/" alt="avtar image">
+          </div>
+          </a>
+          <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+            felis in faucibus.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </article>
 

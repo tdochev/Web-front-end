@@ -160,7 +160,7 @@ input.search {
         text-transform: uppercase;
         color: #9a1d0d;
     }
-    img {
+    img.post-image {
         width: 100%;
         height: auto;
     }
@@ -236,6 +236,18 @@ input.search {
             }
         }
     }
+    .comments.card {
+            margin-top: 1.5rem;
+            .comments-count{
+                font-family: $secondary-font;
+                text-transform: uppercase;
+                color: #9a1d0d;
+                font-size: 2.5rem;
+                border-bottom: 1px dotted #BCBCBC;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+            }
+    }
 }
 
 // @media (max-width: 576px) {
@@ -280,7 +292,7 @@ input.search {
     font-family: $secondary-font;
     letter-spacing: 0.5rem;
     padding: 4rem 0 3rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: block;
     border-bottom: 2px solid #171717;
     a {
