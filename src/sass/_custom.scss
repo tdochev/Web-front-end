@@ -1,5 +1,4 @@
 $background-image: url('../images/logo.png');
-
 body {
     background-color: $body-bg;
     font-family: $main-font;
@@ -11,12 +10,28 @@ input.search {
     background-color: #1d1e1e;
     border: solid #202020;
     border-width: 0 1px 1px 0;
-    border-radius: 3px;
     color: #c5c5c5;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-style: italic;
     text-shadow: 1px 1px $black;
     width: 20rem;
+}
+
+.form-control:focus {
+    color: #c5c5c5;
+    background-color: #1d1e1e;
+    border-color: #1d1e1e;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(220, 192, 142, .5);
+    width: 15rem;
+}
+
+@media (min-width: 576px) {
+    .form-inline .form-control {
+        display: inline-block;
+        width: 12rem;
+        vertical-align: middle;
+    }
 }
 
 .navbar-nav{
@@ -35,6 +50,8 @@ input.search {
         background-color: #222;
         border-radius: 0 7px 7px 7px;
         margin-top: 0;
+        border: 0px;
+        box-shadow: 2px 2px 2px #222;
     }
     a.dropdown-item.nav-link {
         background-color: #222;
@@ -46,8 +63,8 @@ input.search {
         content: "»";
         padding-right: 0.5rem;
     }
-    a.dropdown-item.nav-link:hover::before{
-        color:#9a1d0d;
+    a.dropdown-item.nav-link:hover::before {
+        color: #9a1d0d;
     }
     li.nav-item.dropdown.show {
         background-color: #222;
@@ -61,7 +78,6 @@ input.search {
 .navbar-toggler {
     border: 1px solid #dcc08e;
 }
-
 
 .post {
     border: 3px solid $main-link-color;
@@ -139,6 +155,31 @@ input.search {
     }
 }
 
+.single-post{
+    width: 70%;
+    font-family: $secondary-font;
+
+    h1{
+        text-transform: uppercase;
+        color: #9a1d0d;
+
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        border-left: 0;
+        border-right: 0;
+        padding: 2.5rem;
+        border-radius: 0px;
+        .author{
+            text-transform: uppercase;
+            color: #212121;
+        }
+    }
+}
 
 // @media (max-width: 576px) {
 //     .post{
@@ -152,6 +193,12 @@ input.search {
     background: none;
     margin-bottom: 0.5rem;
     padding: 0 1.5rem;
+
+    a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #545454;
+    }
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -161,17 +208,16 @@ input.search {
 }
 
 @media (min-width: 1200px) {
-    header{
+    header {
         padding-left: 2rem;
     }
 }
+
 @media (max-width: 1199px) {
-    header{
+    header {
         padding-left: 0.5rem;
     }
 }
-
-
 
 .pagination {
     color: $white;
@@ -181,7 +227,6 @@ input.search {
     font-size: 3rem;
     display: block;
     border-bottom: 2px solid #171717;
-
     a {
         color: $white;
     }
@@ -193,12 +238,12 @@ input.search {
         text-align: center;
         padding: 0;
     }
-    ul > li:first-child {
+    ul>li:first-child {
         position: absolute;
         left: 2rem;
         top: -0.5rem;
     }
-    ul > li:last-child {
+    ul>li:last-child {
         position: absolute;
         right: 2rem;
         top: -0.5rem;
@@ -207,7 +252,7 @@ input.search {
         border: none;
         background: none;
     }
-    li.page-item{
+    li.page-item {
         display: inline-flex;
     }
 }
@@ -217,7 +262,7 @@ input.search {
         ul>li:last-child {
             right: 1rem;
         }
-        ul > li:first-child {
+        ul>li:first-child {
             left: 1rem;
         }
     }
@@ -226,14 +271,12 @@ input.search {
 footer {
     border-top: 2px solid #4a4a4a;
     padding: 2rem 0rem 2rem 0rem;
-
     background-image: -webkit-gradient(linear, 0 0, 964 0, from(#191918), color-stop(0.045, #1a1b1b), color-stop(0.061, #1c1b1c), color-stop(0.065, #1b1c1c), color-stop(0.088, #1d1c1c), color-stop(0.098, #1c1d1d), color-stop(0.099, #1d1c1d), color-stop(0.105, #1d1d1d), color-stop(0.105, #1d1f1d), color-stop(0.106, #1f1d1d), color-stop(0.108, #1d1d1f), color-stop(0.11, #1f1d1f), color-stop(0.113, #1f1f1d), color-stop(0.151, #212020), color-stop(0.152, #202120), color-stop(0.154, #202021), color-stop(0.18, #222322), color-stop(0.181, #222223), color-stop(0.185, #232222), color-stop(0.185, #222323), color-stop(0.188, #232223), color-stop(0.189, #222323), color-stop(0.19, #232222), color-stop(0.199, #242324), color-stop(0.245, #262526), color-stop(0.245, #252625), color-stop(0.258, #262726), color-stop(0.258, #272626), color-stop(0.261, #262727), color-stop(0.267, #272627), color-stop(0.28, #272828), color-stop(0.282, #282728), color-stop(0.31, #282828), color-stop(0.31, #2a282a), color-stop(0.312, #282828), color-stop(0.322, #282a28), color-stop(0.325, #2a2a2a), color-stop(0.364, #2b2b2c), color-stop(0.368, #2b2c2b), color-stop(0.369, #2c2b2c), color-stop(0.371, #2b2c2c));
     background-image: -webkit-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
     background-image: -moz-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
     background-image: -o-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
     background-image: linear-gradient(90deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
-
-    .row{
+    .row {
         width: 90%;
         margin: auto;
     }
@@ -248,19 +291,18 @@ footer {
         padding-bottom: 2rem;
     }
     h3 {
-    font-family: $secondary-font;
-      text-transform: uppercase; 
+        font-family: $secondary-font;
+        text-transform: uppercase;
     }
     a {
         color: #d1d1d1;
         padding-top: 0.3rem;
         text-shadow: 1px 1px $black;
     }
-
-    p{
+    p {
         color: #d1d1d1;
     }
-    a:hover{
+    a:hover {
         color: $white;
         text-shadow: 1px 1px $black;
         text-decoration: inherit;
@@ -270,7 +312,7 @@ footer {
         color: #5d5d5d;
         padding-right: 0.5rem;
     }
-    a:hover::before{
-        color:#9a1d0d;
+    a:hover::before {
+        color: #9a1d0d;
     }
 }

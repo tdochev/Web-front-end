@@ -1,5 +1,21 @@
+{{> nav }}
+
 <nav class="breadcrumb">
   <a class="breadcrumb-item" href="#">Home</a>
   <a class="breadcrumb-item" href="#">{{post.category}}</a>
   <span class="breadcrumb-item active">{{post.title}}</span>
 </nav>
+
+<article class="single-post">
+  <div class="row">
+    <div class="col-sm-12 col-lg-3 card">
+      <img src="{{post.imageUrl}}" alt="Post image">
+    </div>
+        <div class="col-sm-12 col-lg-9 card">
+          <h1>{{post.title}}</h1>
+          <span class="author">posted by {{post.author}} IN {{post.category}} | 0 COMMENTS</span>
+    </div>
+  </div>
+</article>
+
+{{> footer }}

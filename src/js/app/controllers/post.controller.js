@@ -47,13 +47,17 @@ export default class postController {
     }
 
     show(id) {
+        this._template.compilePartial('nav');
+        this._template.compilePartial('footer');
         this._template.loadTemplate('postPage').then((compiledTemplate) => {
-            this._data.getPostByID(id).then(post => {
+            Promise.all([this._data.getPostByID(id), this._data.getCategories()]).then((result)=>{
+                console.log(result);
                 const context = {
-                    post: post
+                    post: result[0],
+                    categories: result[1]
                 };
                 $('#app-main').html(compiledTemplate(context));
+            });
             })
-        });
     }
 }
