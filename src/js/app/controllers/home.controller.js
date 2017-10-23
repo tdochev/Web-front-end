@@ -11,8 +11,6 @@ export default class homeController {
         console.log('home controller test');
     }
     main() {
-        const headerLen = $('header').length;
-        if (headerLen < 1) {
             this._data.getCategories().then((r) => {
                 for (var prop in r) {
                     this._categories.push(r[prop]);
@@ -27,6 +25,6 @@ export default class homeController {
                     $('#app-main').html(compiledTemplate(context));
                 })
             });
-        }
+        
     }
 }
