@@ -17,8 +17,9 @@ export default class homeController {
                 for (var prop in r) {
                     this._categories.push(r[prop]);
                 }
-                this._template.compilePartial('post');
                 this._template.compilePartial('nav');
+                this._template.compilePartial('post');
+                this._template.compilePartial('footer');
                 this._template.loadTemplate('home').then((compiledTemplate) => {
                     const context = {
                         categories: this._categories

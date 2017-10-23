@@ -1,13 +1,8 @@
-@font-face {
-    font-family: "LeagueGothicRegular";
-    src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
-    font-weight: normal;
-}
-
 $background-image: url('../images/logo.png');
+
 body {
     background-color: $body-bg;
-    font-family: LeagueGothicRegular;
+    font-family: $main-font;
     color: $main-color;
 }
 
@@ -20,13 +15,13 @@ input.search {
     color: #c5c5c5;
     font-size: 1.1rem;
     font-style: italic;
-    text-shadow: 1px 1px #000;
-    width: 17rem;
+    text-shadow: 1px 1px $black;
+    width: 20rem;
 }
 
 .navbar-nav{
     a {
-        font-family: LeagueGothicRegular;
+        font-family: $secondary-font;
         color: $white;
         text-shadow: 1px 1px $black;
         letter-spacing: 1px;
@@ -67,6 +62,7 @@ input.search {
     border: 1px solid #dcc08e;
 }
 
+
 .post {
     border: 3px solid $main-link-color;
     margin-left: 28px;
@@ -74,6 +70,7 @@ input.search {
     padding: 0px;
     max-width: min-content;
     background-color: $main-link-color;
+    font-family: $secondary-font;
     span {
         color: $main-link-color;
         font-size: 48px;
@@ -107,12 +104,13 @@ input.search {
         margin: 0px;
         padding-left: 10px;
         padding-right: 14px;
+        color: #212121;
     }
     div.border {
         border: 1px dotted #BCBCBC;
     }
     .post-text {
-        font-family: $font-family-secondary;
+        font-family: $main-font;
         font-size: 13px;
         color: #7a7575;
         margin-top: 8px;
@@ -177,11 +175,13 @@ input.search {
 
 .pagination {
     color: $white;
-    font-family: LeagueGothicRegular;
+    font-family: $secondary-font;
     letter-spacing: 0.5rem;
     padding: 4rem 0 3rem;
     font-size: 3rem;
     display: block;
+    border-bottom: 2px solid #171717;
+
     a {
         color: $white;
     }
@@ -200,7 +200,7 @@ input.search {
     }
     ul > li:last-child {
         position: absolute;
-        right: 10rem;
+        right: 2rem;
         top: -0.5rem;
     }
     .page-link {
@@ -220,5 +220,57 @@ input.search {
         ul > li:first-child {
             left: 1rem;
         }
+    }
+}
+
+footer {
+    border-top: 2px solid #4a4a4a;
+    padding: 2rem 0rem 2rem 0rem;
+
+    background-image: -webkit-gradient(linear, 0 0, 964 0, from(#191918), color-stop(0.045, #1a1b1b), color-stop(0.061, #1c1b1c), color-stop(0.065, #1b1c1c), color-stop(0.088, #1d1c1c), color-stop(0.098, #1c1d1d), color-stop(0.099, #1d1c1d), color-stop(0.105, #1d1d1d), color-stop(0.105, #1d1f1d), color-stop(0.106, #1f1d1d), color-stop(0.108, #1d1d1f), color-stop(0.11, #1f1d1f), color-stop(0.113, #1f1f1d), color-stop(0.151, #212020), color-stop(0.152, #202120), color-stop(0.154, #202021), color-stop(0.18, #222322), color-stop(0.181, #222223), color-stop(0.185, #232222), color-stop(0.185, #222323), color-stop(0.188, #232223), color-stop(0.189, #222323), color-stop(0.19, #232222), color-stop(0.199, #242324), color-stop(0.245, #262526), color-stop(0.245, #252625), color-stop(0.258, #262726), color-stop(0.258, #272626), color-stop(0.261, #262727), color-stop(0.267, #272627), color-stop(0.28, #272828), color-stop(0.282, #282728), color-stop(0.31, #282828), color-stop(0.31, #2a282a), color-stop(0.312, #282828), color-stop(0.322, #282a28), color-stop(0.325, #2a2a2a), color-stop(0.364, #2b2b2c), color-stop(0.368, #2b2c2b), color-stop(0.369, #2c2b2c), color-stop(0.371, #2b2c2c));
+    background-image: -webkit-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
+    background-image: -moz-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
+    background-image: -o-linear-gradient(360deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
+    background-image: linear-gradient(90deg, #191918, #1a1b1b 4.5%, #1c1b1c 6.1%, #1b1c1c 6.5%, #1d1c1c 8.8%, #1c1d1d 9.8%, #1d1c1d 9.9%, #1d1d1d 10.5%, #1d1f1d 10.5%, #1f1d1d 10.6%, #1d1d1f, #1f1d1f 11%, #1f1f1d 11.3%, #212020 15.1%, #202120 15.2%, #202021 15.4%, #222322 18%, #222223 18.1%, #232222 18.5%, #222323 18.5%, #232223 18.8%, #222323, #232222 19%, #242324 19.9%, #262526 24.5%, #252625 24.5%, #262726 25.8%, #272626 25.8%, #262727 26.1%, #272627 26.7%, #272828 28%, #282728 28.2%, #282828 31%, #2a282a 31%, #282828 31.2%, #282a28 32.2%, #2a2a2a 32.5%, #2b2b2c 36.4%, #2b2c2b 36.8%, #2c2b2c 36.9%, #2b2c2c 37.1%);
+
+    .row{
+        width: 90%;
+        margin: auto;
+    }
+    .card {
+        background-color: transparent;
+        background-clip: border-box;
+        border-width: 1px;
+        border-style: none;
+        border-color: transparent;
+        border-image: initial;
+        border-radius: 0;
+        padding-bottom: 2rem;
+    }
+    h3 {
+    font-family: $secondary-font;
+      text-transform: uppercase; 
+    }
+    a {
+        color: #d1d1d1;
+        padding-top: 0.3rem;
+        text-shadow: 1px 1px $black;
+    }
+
+    p{
+        color: #d1d1d1;
+    }
+    a:hover{
+        color: $white;
+        text-shadow: 1px 1px $black;
+        text-decoration: inherit;
+    }
+    a::before {
+        content: "»";
+        color: #5d5d5d;
+        padding-right: 0.5rem;
+    }
+    a:hover::before{
+        color:#9a1d0d;
     }
 }
