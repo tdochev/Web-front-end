@@ -114,17 +114,16 @@ input.search {
             text-transform: uppercase;
         }
     }
-    p.author {
+    span.author {
         font-size: 18px;
         text-transform: uppercase;
         margin: 0px;
         padding-left: 10px;
         padding-right: 14px;
         color: #212121;
+        border-bottom: 1px dotted #BCBCBC
     }
-    div.border {
-        border: 1px dotted #BCBCBC;
-    }
+
     .post-text {
         font-family: $main-font;
         font-size: 13px;
@@ -177,6 +176,14 @@ input.search {
         .author{
             text-transform: uppercase;
             color: #212121;
+            border-bottom: 1px dotted #BCBCBC;
+            padding-bottom: 0.5rem;
+        }
+        .content{
+            padding-top: 0.5rem;
+            font-size: 0.8rem;
+            font-family: $main-font;
+            color: #837e7e;
         }
     }
 }

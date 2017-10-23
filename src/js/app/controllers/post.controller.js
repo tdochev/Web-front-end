@@ -1,4 +1,5 @@
 import Post from './../../models/post.model';
+import Helper from './../templates/helpers/handlebars-truncate-helper';
 
 export default class postController {
 
