@@ -38,12 +38,28 @@ input.search {
     }
     .dropdown-menu.show {
         background-color: #222;
+        border-radius: 0 7px 7px 7px;
+        margin-top: 0;
     }
     a.dropdown-item.nav-link {
         background-color: #222;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    a.dropdown-item.nav-link::before {
+        color: #4f4f4f;
+        content: "»";
+        padding-right: 0.5rem;
+    }
+    a.dropdown-item.nav-link:hover::before{
+        color:#9a1d0d;
     }
     li.nav-item.dropdown.show {
         background-color: #222;
+        border-radius: 7px 7px 0px 0px;
+    }
+    .dropdown-toggle::after {
+        content: none;
     }
 }
 
