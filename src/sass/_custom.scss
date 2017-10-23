@@ -33,6 +33,18 @@ input.search {
         font-size: 1.4rem;
         text-transform: uppercase;
     }
+    a:hover {
+        color: $main-color;
+    }
+    .dropdown-menu.show {
+        background-color: #222;
+    }
+    a.dropdown-item.nav-link {
+        background-color: #222;
+    }
+    li.nav-item.dropdown.show {
+        background-color: #222;
+    }
 }
 
 .navbar-toggler {
@@ -145,12 +157,14 @@ input.search {
     }
 }
 
+
+
 .pagination {
     color: $white;
     font-family: LeagueGothicRegular;
     letter-spacing: 0.5rem;
     padding: 4rem 0 3rem;
-    font-size: 4rem;
+    font-size: 3rem;
     display: block;
     a {
         color: $white;
@@ -161,15 +175,16 @@ input.search {
     ul {
         position: relative;
         text-align: center;
+        padding: 0;
     }
     ul > li:first-child {
         position: absolute;
-        left: 0;
+        left: 2rem;
         top: -0.5rem;
     }
     ul > li:last-child {
         position: absolute;
-        right: 0;
+        right: 10rem;
         top: -0.5rem;
     }
     .page-link {
@@ -178,5 +193,16 @@ input.search {
     }
     li.page-item{
         display: inline-flex;
+    }
+}
+
+@media (max-width: 992px) {
+    .pagination {
+        ul>li:last-child {
+            right: 1rem;
+        }
+        ul > li:first-child {
+            left: 1rem;
+        }
     }
 }
